@@ -26,8 +26,14 @@ public class Product {
 		this.price = price;
 	}
 	
+	// O método estático acessa o atributo do que eu passar como argumento.
 	public static boolean staticProductPredicate(Product p) {
 		return p.getPrice() >= 100.00;
+	}
+	
+	// O método não estático acessa diretamente o atributo da instância.
+	public boolean nonStaticProductPredicate() {
+		return price >= 100.00;
 	} 
 
 	@Override
